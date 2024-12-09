@@ -1,0 +1,37 @@
+//existen con y sin parametros, son como la caja de pandora, con un monton de cosas dentro
+
+// con parametro @mixin medidas ($width, height){ width:$widht; height :$ height, luego se pone @includ medidas (400px, 500px)
+
+
+//sin parametros @mixin flex-row( display : flex; justify-content: center; align-items: center etc o
+// @mixin flex-column ( display: flex; flex- direction column, justify content etc.
+// @include flex-row;
+
+@mixin reset-css{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin display-flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin font{
+    font-family: "Lexend", sans-serif;
+
+}
+@mixin display-flex-dos{
+    display: flex;
+    justify-content: center;
+}
+@mixin display-flex-tres{
+    display: flex;
+    align-items: center;
+}
+@mixin textos-uno{
+    color: #FAD8CE;
+    text-align: left;
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+}

@@ -1,0 +1,586 @@
+
+@import "utilidades/variables";
+@import "utilidades/listas";
+@import "utilidades/mixin";
+
+*{
+    @include reset-css;
+}
+
+.rosa-cifelu-bg{
+        background-color: $rosa-cifelu;
+    }
+
+/* Ajustar el tamaño del navbar */
+.navbar {
+    padding: $pad-0-25-0-5;
+}
+.nav-item.dropdown a ul li{
+    font-size: $font-10;
+}
+.navbar-nav .dropdown-menu.rosa-cifelu-bg{
+    background-color: $rosa-cifelu;
+    font-size: $font-cero-65;
+    padding: $pad-0-25;
+}
+.navbar-nav .dropdown-item.otro-rosa-cifelu-hover {
+    font-size: $font-cero-65;
+    padding: $pad-0-25-0-5;
+    margin: $margin-0-25;
+}
+.navbar-nav .dropdown-item.otro-rosa-cifelu-hover:hover{
+    background-color: $rosa-cifelu-dos;
+}
+/* Estilos de main */
+main{
+    background-color: $rosa-cifelu-dos;
+    @include display-flex;
+      h1{color: $color-claro;
+         text-align: $text-align;
+         padding: $pad-2;
+         @include font;
+         font-weight: bold;
+         font-size: $font-50;
+
+         .nombre-cifelu{
+          color: $color-dorado;
+          font-size: $font-80;
+            }
+      }
+      .contenedor{
+          background-color: $rosa-cifelu-dos;
+          @include display-flex-tres;
+          justify-content: $justify-space;
+          gap: $gap-20;
+          width: $width-uno;
+          margin: $margin-0;
+
+          img{
+          display: $display-uno;
+          margin: $margin-20;
+          width: $width-dos;
+          max-height: $max-width;
+         }
+         .img{
+           flex: 1;
+         }
+         .img img{
+         width: $width-tres;
+         max-width: 600px;
+      }
+    }
+    .textos{
+        flex: 1;
+        @include display-flex-dos;
+        gap: $gap-20;
+        align-items: center;
+        flex-direction: column;
+
+        .texto-primero{
+            font-size: $font-30;
+            margin-bottom: $mar-bot-10;
+            @include textos-uno;
+
+            .texto-ahora{
+                color: $color-dorado;
+            }
+
+         }
+    
+         .texto-segundo{
+         @include textos-uno;
+         font-size: $font-20;
+         margin-bottom: $mar-bot-10;
+         }
+         .texto-tercero{
+         @include textos-uno;
+         font-size: $font-15;
+         color: $color-dorado;
+         margin-bottom: $mar-bot-20;
+        }
+         a{
+            .compra-ahora-principal {
+             background-color: $color-dorado;
+             color: $negro;
+             border: $negro;
+             padding: $pad-20-25;
+             text-align: center;
+             border-radius: 50px;
+             font-size: $font-18;
+             @include font;
+             cursor: pointer;
+             margin: $margin-10; 
+             }
+              .compra-ahora-principal:hover {
+             background-color: $color-rosa-fuerte;
+             color: $rosa-cifelu;
+            }
+        
+              .compra-ahora-principal:active {
+             background-color: $rosa-cifelu ;
+            }
+        }
+
+    }
+/* Estilos para las fotos de conjuntos */
+ .todos-conjuntos{
+    @include display-flex-dos;
+    flex-wrap: wrap;
+    gap: 10px;
+   
+      img{
+        width: 200px;
+        height: auto;
+      }
+    } 
+}
+ /* Estilos específicos para carrito */
+  main.carrito-carrito {
+     padding: $pad-40;
+     padding-bottom: 20px;
+     background-color: $rosa-cifelu-dos;
+     @include display-flex-tres;
+     flex-direction: column;
+     gap: 20px;
+
+
+       .card-carrito{
+        display: flex;
+        width: 100%;
+        max-width: 800px;
+        background-color: $rosa-cifelu-dos; 
+        border: 2px solid $color-dorado;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: $mar-bot-10;
+        box-shadow: $box;
+
+         .fila-carrito{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            .carrito-imagen {
+                flex: 1;
+            
+                      img{
+                      width: 150px;
+                      height: auto;
+                     object-fit: cover;
+                      border: none; 
+                   }
+            }
+         .card-body-carrito {
+            flex: 1;
+            @include display-flex-dos;
+             flex-direction: column;
+             padding: $pad-10;
+
+             .card-titulo {
+                color: $white-s;
+                font-size: $font-2-rem;
+                margin-bottom:$mar-bot-5;
+             } 
+         .card-texto {
+            color: $white-s;
+            font-size: $font-1-rem;
+            margin-bottom: $mar-bot-5;
+            }
+        .eliminar-producto{
+            background-color: $color-rosa-fuerte;
+             width: 100px;
+             color: $rosa-cifelu;
+             border: none;
+             padding: $pad-10-15;
+             text-align: center;
+             border-radius: 5px;
+             font-size: $font-15;
+             @include font;
+             cursor: progress;
+             margin-top: 10px;
+
+
+             &:hover{
+                background-color: $rosa-cifelu;
+                color: $color-rosa-fuerte;
+                }
+               }
+            }
+        }
+    }
+}
+.pagar{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: flex-end;
+
+    .pagar-ahora{
+        background-color: $color-dorado;
+        color: $negro;
+        border: none;
+        padding: $pad-10-15;
+        text-align: center;
+        border-radius: 50px;
+        font-size: $font-18;
+        @include font;
+        cursor: pointer;
+        margin: $margin-10;
+
+        &:hover {
+            background-color: $color-rosa-fuerte;
+            color: $rosa-cifelu;
+            }
+    .pagar-ahora:active {
+        background-color: $rosa-cifelu;
+        color: $color-dorado;    
+    }  
+}
+}
+/* Estilos específicos para todos-los-productos*/
+main.todos-articulos{
+    padding: $pad-20;
+    background-color: $rosa-cifelu-dos;
+    @include display-flex-tres;
+    flex-direction: column;
+    gap: 20px;
+    .texto-bloque{
+        text-align: center;
+        color: $color-dorado;
+        margin-bottom: $mar-bot-20;
+
+        h1{
+            font-size: $font-2-rem;
+            margin-bottom: $mar-bot-10;
+        }
+        p{
+            font-size: $font-1-5-rem;  
+        }
+
+    }
+    .busqueda-bloque{
+        width: 100%;
+        max-width: 800px;
+        @include display-flex-dos;
+        margin-bottom: $mar-bot-20;
+        .busqueda{
+            width: 100%;
+            padding: $pad-10;
+            font-size: $font-1-rem;
+            border: 2px solid $color-dorado;
+            border-radius: 5px;
+
+        }
+    }
+    .grid-producto{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        .grid-item{
+            @include display-flex-tres;
+            flex-direction: column;
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+            p{
+                margin-top: 5px;
+                color: $color-dorado;
+                font-size: $font-2-rem;
+                 text-align: center;
+            }
+        }
+    }
+}
+/* Estilos específicos para compra-ahora */
+main.compra-ahora {
+    background-color: $rosa-cifelu-dos;
+    @include display-flex-dos;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: $pad-20;
+
+    .card-compra-ahora {
+        @include display-flex-dos;
+        flex-direction: column;
+        align-items: center;
+        width: 55%;
+        max-width: 550px;
+        background-color: $rosa-cifelu-dos;
+        border: none;
+        border-radius: 10px;
+        box-shadow: $box;
+        margin: $margin-0;
+
+        .card-imagen-ahora {
+            @include display-flex-dos;
+            align-items: center;
+            max-width: 80%;
+
+            img {
+                width: 100%;
+                max-width: 600px;
+                border-radius: 10px;
+                display: flex;
+            }
+        }
+
+        .card-body-ahora {
+            @include display-flex-dos;
+            flex-direction: column;
+            gap: 10px;
+            background-color: $rosa-cifelu-dos;
+
+            .card-titulo-ahora {
+                color: $color-dorado;
+                font-size: $font-2-rem;
+                text-align: center;
+                background-color: $rosa-cifelu-dos;
+            }
+
+            .card-talle-ahora, 
+            .card-colores-ahora {
+                @include display-flex-dos;
+                align-items: center;
+                color: $color-claro;
+                font-size: $font-1-rem;
+                gap: 10px;
+
+                .talle-seleccion, 
+                .colores-seleccion {
+                    background-color: $rosa-cifelu;
+                    color: $rosa-cifelu-dos;
+                    border: none;
+                    padding: $pad-5;
+                    font-size: $font-1-rem;
+                }
+
+                .colores-seleccion option {
+                    background-color: $rosa-cifelu;
+                    color: $rosa-cifelu-dos;
+                }
+            }
+
+            .card-info-ahora {
+                text-align: center;
+
+                .card-texto-ahora {
+                    color: $color-claro;
+                    font-size: $font-1-rem;
+                }
+
+                .card-valoraciones-ahora {
+                    color: $color-claro;
+                    font-size: $font-1-rem;
+                    margin-top: 10px;
+                }
+
+                .estrellas-valoracion {
+                    color: $estrellas; 
+                    font-size: $font-1-rem;
+                }
+            }
+
+            .productos-colores {
+                display: flex;
+                
+                img {
+                    width: 13%;
+                    height: auto;
+                    border-radius: 5px;
+                    display: block;
+                }
+            }
+        }
+
+        .agregar-carrito {
+            background-color: $color-dorado;
+            color: $negro;
+            border: none;
+            padding: $pad-20-25;
+            text-align: center;
+            border-radius: 50px;
+            font-size: $font-18;
+            @include font;
+            cursor: pointer;
+            margin: $margin-10;
+
+            &:hover {
+                background-color: $color-rosa-fuerte;
+                color:$rosa-cifelu;
+            }
+
+            &:active {
+                background-color: $rosa-cifelu;
+            }
+        }
+    }
+}
+/* Estilos específicos para contacto*/
+main.contacto{
+    background-color: $rosa-cifelu-dos;
+    color: $negro;
+    @include display-flex-tres;
+    flex-direction: column;
+    padding: $pad-50-20;
+    width: 100%;
+
+    .titulo-contacto {
+        font-size: $font-2-rem;
+        margin-bottom: $mar-bot-20;
+        @include font;
+    }
+    .contacto-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 80%;
+        max-width: 600px;
+        background-color: $rosa-cifelu;
+        padding: $pad-20;
+        border-radius: 10px;
+        box-shadow: $box;
+
+        .form-grupo {
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: $font-1-5-rem;
+                margin-bottom: $mar-bot-5;
+
+            }
+            input, textarea{
+                padding: $pad-10;
+                border: 2px solid $rosa-cifelu-dos;
+                border-radius: 5px;
+                font-size: $font-1-rem;
+             }
+        }
+        /* Estilos para el botón de enviar del formulario de contacto */
+        .boton-enviar {
+            background-color: $color-dorado;
+            color: $negro;
+            border: none;
+            padding: $pad-20-25; 
+            text-align: center;
+            border-radius: 50px; 
+            font-size: $font-18;
+            @include font;
+            cursor: pointer;
+            margin: $margin-10;
+            display: inline-block; 
+            width: auto;
+
+            &:hover{
+                background-color: $color-rosa-fuerte;
+                color: $rosa-cifelu;
+
+             &:active {
+                 background-color: $rosa-cifelu;
+                 }
+            }
+        }
+    }
+}
+
+
+/* Estilos del footer */
+footer {
+    background-color: $rosa-cifelu;
+    color: $negro;
+    text-align: center; 
+    padding: $pad-2;
+    font-size: $font-1-rem;
+    @include font;
+}
+
+ /* Media queries para dispositivos móviles */
+ /* Para index */
+ @media screen and (max-width: 768px) {
+    h1{
+        font-size: $font-25;
+    }
+.nombre-cifelu{
+    font-size: $font-40;
+}
+.texto-primero{
+display: block;
+font-size: $font-1-rem;
+padding: $pad-10;
+
+}
+.texto-segundo, .texto-tercero{
+    display: none;
+}
+.todos-conjuntos{
+    display: none;
+}
+.img img {
+    width: 100%;
+    max-width: 600px;
+}
+}
+.navbar-nav .nav-item .nav-link{
+    font-size: $font-1-rem;
+    margin-right: 5px;
+}
+nav .container-fluid img{
+    width: 60px;
+    margin-right: 5px;
+}
+main{
+    padding: $pad-10;
+}
+/* Para carrito */
+.card-titulo{
+    font-size: $font-15;}
+
+.card-texto{
+    font-size: $font-10;
+}
+.card-info-ahora{
+ font-size: $font-8;
+}
+.pagar{
+    font-size: $font-8;
+}
+/* Para compra-ahora */
+.productos-colores img {
+display: none;
+}
+/* Para todos-los-productos*/
+.grid-item p{
+    font-size: $font-10;
+}
+
+/* Media queries para tablets */
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+/* Para index*/
+ .t1odos-conjuntos{
+     display: none;
+ }
+ .img img {
+    width: 100%;
+    max-width: 600px;}
+/* Para compra-ahora */
+.productos-colores img {
+    display: block;
+    width: 10%;
+    max-width: 300px;
+    }
+}
+/* Estilos adicionales para escritorio */
+ @media screen and (min-width: 1024px) { 
+    .productos-colores img {
+     display: block;
+    }
+/* Para todos-los-productos*/
+.grid-item p{
+    font-size: $font-30;
+}
+}
