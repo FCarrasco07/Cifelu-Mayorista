@@ -6,11 +6,6 @@
 *{
     @include reset-css;
 }
-
-.rosa-cifelu-bg{
-        background-color: $rosa-cifelu;
-    }
-
 /* Ajustar el tamaño del navbar */
 .navbar {
     padding: $pad-0-25-0-5;
@@ -32,96 +27,103 @@
     background-color: $rosa-cifelu-dos;
 }
 /* Estilos de main */
-main{
+main {
     background-color: $rosa-cifelu-dos;
     @include display-flex;
-      h1{color: $color-claro;
-         text-align: $text-align;
-         padding: $pad-2;
-         @include font;
-         font-weight: bold;
-         font-size: $font-50;
-
-         .nombre-cifelu{
-          color: $color-dorado;
-          font-size: $font-80;
-            }
-      }
-      .contenedor{
-          background-color: $rosa-cifelu-dos;
-          @include display-flex-tres;
-          justify-content: $justify-space;
-          gap: $gap-20;
-          width: $width-uno;
-          margin: $margin-0;
-
-          img{
-          display: $display-uno;
-          margin: $margin-20;
-          width: $width-dos;
-          max-height: $max-width;
-         }
-         .img{
-           flex: 1;
-         }
-         .img img{
-         width: $width-tres;
-         max-width: 600px;
+  
+    h1 {
+      color: $color-claro;
+      text-align: $text-align;
+      padding: $pad-2;
+      @include font;
+      font-weight: bold;
+      font-size: $font-50;
+  
+      .nombre-cifelu {
+        color: $color-dorado;
+        font-size: $font-80;
       }
     }
-    .textos{
+  
+    .contenedor {
+      background-color: $rosa-cifelu-dos;
+      @include display-flex-tres;
+      justify-content: $justify-space;
+      gap: $gap-20;
+      width: $width-uno;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      .img {
         flex: 1;
-        @include display-flex-dos;
-        gap: $gap-20;
-        align-items: center;
-        flex-direction: column;
-
-        .texto-primero{
-            font-size: $font-30;
-            margin-bottom: $mar-bot-10;
-            @include textos-uno;
-
-            .texto-ahora{
-                color: $color-dorado;
-            }
-
-         }
-    
-         .texto-segundo{
-         @include textos-uno;
-         font-size: $font-20;
-         margin-bottom: $mar-bot-10;
-         }
-         .texto-tercero{
-         @include textos-uno;
-         font-size: $font-15;
-         color: $color-dorado;
-         margin-bottom: $mar-bot-20;
-        }
-         a{
-            .compra-ahora-principal {
-             background-color: $color-dorado;
-             color: $negro;
-             border: $negro;
-             padding: $pad-20-25;
-             text-align: center;
-             border-radius: 50px;
-             font-size: $font-18;
-             @include font;
-             cursor: pointer;
-             margin: $margin-10; 
-             }
-              .compra-ahora-principal:hover {
-             background-color: $color-rosa-fuerte;
-             color: $rosa-cifelu;
-            }
-        
-              .compra-ahora-principal:active {
-             background-color: $rosa-cifelu ;
-            }
-        }
-
+      }
+  
+      .img.conjunto-azul img {
+        width: 100%;
+        max-width: 100%; /* Sin restricciones */
+        height: auto;
+        margin: 0;
+        padding: 0;
     }
+    
+    }
+  }
+  
+  .textos {
+    flex: 1;
+    @include display-flex-dos;
+    gap: $gap-20;
+    align-items: center;
+    flex-direction: column;
+  
+    .texto-primero {
+    @include textos-uno;
+      font-size: $font-30;
+      margin-bottom: $mar-bot-20;
+      
+  
+      .texto-ahora {
+        color: $color-dorado;
+      }
+    }
+  
+    .texto-segundo {
+      @include textos-uno;
+      font-size: $font-20;
+      margin-bottom: $mar-bot-20;
+    }
+  
+    .texto-tercero {
+      @include textos-uno;
+      font-size: $font-15;
+      color: $color-dorado;
+      margin-bottom: $mar-bot-20;
+    }
+  
+    a {
+      .compra-ahora-principal {
+        background-color: $color-dorado;
+        color: $negro;
+        border: $negro;
+        padding: $pad-20-25;
+        text-align: center;
+        border-radius: 50px;
+        font-size: $font-18;
+        @include font;
+        cursor: pointer;
+        margin: $margin-10;
+      }
+  
+      .compra-ahora-principal:hover {
+        background-color: $color-rosa-fuerte;
+        color: $rosa-cifelu;
+      }
+  
+      .compra-ahora-principal:active {
+        background-color: $rosa-cifelu;
+      }
+    }
+  } 
 /* Estilos para las fotos de conjuntos */
  .todos-conjuntos{
     @include display-flex-dos;
@@ -133,7 +135,6 @@ main{
         height: auto;
       }
     } 
-}
  /* Estilos específicos para carrito */
   main.carrito-carrito {
      padding: $pad-40;
@@ -233,9 +234,8 @@ main{
             }
     .pagar-ahora:active {
         background-color: $rosa-cifelu;
-        color: $color-dorado;    
+        color: $color-dorado; }  
     }  
-}
 }
 /* Estilos específicos para todos-los-productos*/
 main.todos-articulos{
@@ -505,6 +505,11 @@ footer {
     h1{
         font-size: $font-25;
     }
+ .img.conjunto-azul img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 .nombre-cifelu{
     font-size: $font-40;
 }
@@ -561,12 +566,10 @@ display: none;
 /* Media queries para tablets */
  @media screen and (min-width: 768px) and (max-width: 1024px) {
 /* Para index*/
- .t1odos-conjuntos{
+ .todos-conjuntos{
      display: none;
  }
- .img img {
-    width: 100%;
-    max-width: 600px;}
+
 /* Para compra-ahora */
 .productos-colores img {
     display: block;
@@ -579,6 +582,13 @@ display: none;
     .productos-colores img {
      display: block;
     }
+    main .contenedor .img.conjunto-azul img {
+     width: 80%;
+      max-width: 1000px; 
+    }
+  }
+
+      
 /* Para todos-los-productos*/
 .grid-item p{
     font-size: $font-30;

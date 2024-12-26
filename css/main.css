@@ -10,6 +10,7 @@
 }
 
 /* Ajustar el tamaño del navbar */
+
 .navbar {
   padding: 0.25rem 0.5rem;
 }
@@ -40,28 +41,34 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* Estilos para las fotos de conjuntos */
 }
+.conjunto-azul {
+  width: 1000%;
+  max-width: 2000px;
+  height: auto;
+}
+  /* Estilos para las fotos de conjuntos */
 main h1 {
   color: #FAD8CE;
   text-align: center;
-  padding: 2rem;
+  padding: 0rem;
   font-family: "Lexend", sans-serif;
   font-weight: bold;
   font-size: 50px;
+  margin-bottom: 0rem;
 }
 main h1 .nombre-cifelu {
   color: #CBA77E;
-  font-size: 80px;
+  font-size: 70px;
 }
 main .contenedor {
   background-color: #973C73;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
   width: 80%;
-  margin: 0 auto;
+  margin-top: 0;
 }
 main .contenedor img {
   display: block;
@@ -72,23 +79,26 @@ main .contenedor img {
 main .contenedor .img {
   flex: 1;
 }
+
 main .contenedor .img img {
-  width: 60%;
+  width: 100%;
   max-width: 600px;
 }
 main .textos {
   flex: 1;
+  text-align: left;
   display: flex;
   justify-content: center;
   gap: 20px;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 main .textos .texto-primero {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 20px;
   color: #FAD8CE;
-  text-align: left;
+  text-align: center;
   font-family: "Lexend", sans-serif;
   font-weight: bold;
 }
@@ -101,7 +111,7 @@ main .textos .texto-segundo {
   font-family: "Lexend", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 main .textos .texto-tercero {
   color: #FAD8CE;
@@ -116,14 +126,26 @@ main .textos a .compra-ahora-principal {
   background-color: #CBA77E;
   color: black;
   border: black;
-  padding: 20px 25px;
-  text-align: center;
+  padding: 20px 45px;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Lexend", sans-serif;
   cursor: pointer;
   margin: 10px 0;
+  text-align: center;
+  animation: brillo 1.5s infinite; /* Animación infinita */
 }
+
+@keyframes brillo {
+  0%, 100% {
+    box-shadow: 0 0 10px #d01284;
+  }
+  50% {
+    box-shadow: 0 0 20px #d01284, 0 0 30px #FFBCD4, 0 0 40px #d01284;
+  }
+}
+
+
 main .textos a .compra-ahora-principal:hover {
   background-color: #d01284;
   color: #FFBCD4;
@@ -172,7 +194,7 @@ main.carrito-carrito .card-carrito .fila-carrito .carrito-imagen {
   flex: 1;
 }
 main.carrito-carrito .card-carrito .fila-carrito .carrito-imagen img {
-  width: 150px;
+  width: 250px;
   height: auto;
   object-fit: cover;
   border: none;
@@ -253,7 +275,8 @@ main.todos-articulos .texto-bloque {
   color: #CBA77E;
   margin-bottom: 20px;
 }
-main.todos-articulos .texto-bloque h1 {
+main.todos-articulos .texto-bloque h3{
+  color: #FFBCD4;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -328,8 +351,8 @@ main.compra-ahora .card-compra-ahora .card-imagen-ahora {
   max-width: 80%;
 }
 main.compra-ahora .card-compra-ahora .card-imagen-ahora img {
-  width: 100%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 400px;
   border-radius: 10px;
   display: flex;
 }
@@ -388,6 +411,8 @@ main.compra-ahora .card-compra-ahora .card-body-ahora .card-info-ahora .estrella
 }
 main.compra-ahora .card-compra-ahora .card-body-ahora .productos-colores {
   display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 main.compra-ahora .card-compra-ahora .card-body-ahora .productos-colores img {
   width: 13%;
@@ -406,6 +431,7 @@ main.compra-ahora .card-compra-ahora .agregar-carrito {
   font-family: "Lexend", sans-serif;
   cursor: pointer;
   margin: 10px 0;
+  text-decoration: none;
 }
 main.compra-ahora .card-compra-ahora .agregar-carrito:hover {
   background-color: #d01284;
@@ -492,93 +518,95 @@ footer {
 /* Para index */
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 25px;
+    font-size: 20px!important;
+    margin-top: 1rem!important;
   }
   .nombre-cifelu {
-    font-size: 40px;
+    font-size: 40px!important;
   }
   .texto-primero {
-    display: block;
-    font-size: 1rem;
-    padding: 10px;
+    display: block!important;
+    font-size: 1rem!important;
+    padding: 10px!important;
   }
   .texto-segundo, .texto-tercero {
-    display: none;
+    display: none!important;
   }
   .todos-conjuntos {
-    display: none;
+    display: none!important;
   }
-  .img img {
-    width: 100%;
-    max-width: 600px;
+
+     main .contenedor .img img {
+    width: 150%!important;
+    max-width: 1500px!important;
   }
 }
 .navbar-nav .nav-item .nav-link {
-  font-size: 1rem;
-  margin-right: 5px;
+  font-size: 1rem!important;
+  margin-right: 5px!important;
 }
 
 nav .container-fluid img {
-  width: 60px;
-  margin-right: 5px;
+  width: 100px!important;
+  margin-right: 5px!important;
 }
 
 main {
-  padding: 10px;
+  padding: 10px!important;
 }
 
 /* Para carrito */
 .card-titulo {
-  font-size: 15px;
+  font-size: 15px!important;
 }
 
 .card-texto {
-  font-size: 10px;
+  font-size: 10px!important;
 }
 
 .card-info-ahora {
-  font-size: 8px;
+  font-size: 8px!important;
 }
 
 .pagar {
-  font-size: 8px;
+  font-size: 8px!important;
 }
 
 /* Para compra-ahora */
 .productos-colores img {
-  display: none;
+  display: none!important;
 }
 
 /* Para todos-los-productos*/
 .grid-item p {
-  font-size: 10px;
+  font-size: 10px!important;
 }
 
 /* Media queries para tablets */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Para index*/
   .t1odos-conjuntos {
-    display: none;
+    display: none!important;
   }
   .img img {
-    width: 100%;
-    max-width: 600px;
+    width: 100%!important;
+    max-width: 600px!important;
   }
   /* Para compra-ahora */
   .productos-colores img {
-    display: block;
-    width: 10%;
-    max-width: 300px;
+    display: block!important;
+    width: 10%!important;
+    max-width: 300px!important;
   }
 }
 /* Estilos adicionales para escritorio */
 @media screen and (min-width: 1024px) {
   .productos-colores img {
-    display: block;
+    display: block!important;
   }
   /* Para todos-los-productos*/
   .grid-item p {
-    font-size: 30px;
+    font-size: 30px!important;
   }
 }
 
