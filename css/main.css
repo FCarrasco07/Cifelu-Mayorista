@@ -75,6 +75,7 @@ main .contenedor img {
   margin: 20px;
   width: 100%;
   max-height: 900px;
+  object-fit: cover;
 }
 main .contenedor .img {
   flex: 1;
@@ -524,10 +525,15 @@ footer {
   .nombre-cifelu {
     font-size: 40px!important;
   }
+  main .contenedor {
+     flex-direction: column; align-items: center; 
+    }
   .texto-primero {
     display: block!important;
     font-size: 1rem!important;
     padding: 10px!important;
+    margin-bottom: 1px!important;
+    flex-direction: column!important;
   }
   .texto-segundo, .texto-tercero {
     display: none!important;
@@ -535,10 +541,13 @@ footer {
   .todos-conjuntos {
     display: none!important;
   }
-
-     main .contenedor .img img {
-    width: 150%!important;
-    max-width: 1500px!important;
+  main .contenedor .img { 
+    width: 100%;
+    max-width: 100%; 
+  } 
+  main .contenedor .img img { 
+    width: 100% !important; 
+    height: auto !important; max-width: 100% !important; object-fit: cover;
   }
 }
 .navbar-nav .nav-item .nav-link {
@@ -549,6 +558,7 @@ footer {
 nav .container-fluid img {
   width: 100px!important;
   margin-right: 5px!important;
+  flex-direction: column!important;
 }
 
 main {
